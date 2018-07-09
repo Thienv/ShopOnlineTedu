@@ -3,22 +3,23 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TeduShop.Model.Models
 {
-    [Table("OrderDetail")]
+    [Table("OrderDetails")]
     public class OrderDetail
     {
-        [Required]
-        private int OrderID { get; set; }
+        [Key]
+        [Column(Order = 1)]
+        public int OrderID { set; get; }
+
+        [Key]
+        [Column(Order = 2)]
+        public int ProductID { set; get; }
+
+        public int Quantitty { set; get; }
 
         [ForeignKey("OrderID")]
-        public virtual Order order { get; set; }
-
-        [Required]
-        private int ProductID { get; set; }
+        public virtual Order Order { set; get; }
 
         [ForeignKey("ProductID")]
-        public virtual Products product { get; set; }
-
-        [Required]
-        private int Quantitty { get; set; }
+        public virtual Products Product { set; get; }
     }
 }

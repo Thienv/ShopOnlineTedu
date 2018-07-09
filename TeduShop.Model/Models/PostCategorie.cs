@@ -10,31 +10,31 @@ namespace TeduShop.Model.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        private int ID { get; set; }
+        public int ID { get; set; }
 
         [Required]
         [MaxLength(256)]
-        private string Name { get; set; }
+        public string Name { get; set; }
 
         [Required]
         [Column(TypeName = "varchar")]
         [MaxLength(256)]
-        private string Alias { get; set; }
+        public string Alias { get; set; }
 
         [MaxLength(500)]
-        private string Descriptions { get; set; }
+        public string Descriptions { get; set; }
 
         
-        private int? ParentID { get; set; }
+        public int? ParentID { get; set; }
 
         
-        private int? DisplayOrder { get; set; }
+        public int? DisplayOrder { get; set; }
 
         [MaxLength(256)]
-        private string Images { get; set; }
+        public string Images { get; set; }
 
         
-        private bool? HomeFlag { get; set; }
+        public bool? HomeFlag { get; set; }
         public virtual IEnumerable<Post> post { get; set; }
     }
 }

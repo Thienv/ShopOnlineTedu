@@ -10,30 +10,31 @@ namespace TeduShop.Model.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        private int ID { get; set; }
+        public int ID { get; set; }
 
         [Required]
         [MaxLength(256)]
-        private string Names { get; set; }
+        public string Names { get; set; }
 
         [Required]
         [MaxLength(256)]
-        private string Alias { get; set; }
+        public string Alias { get; set; }
 
         [Required]
-        private int CategoryID { get; set; }
+        public int CategoryID { get; set; }
 
         [Required]
         [MaxLength(256)]
-        private string Images { get; set; }
+        public string Images { get; set; }
+
+     
+        [Column(TypeName ="xml")]
+        public string MoreImages { get; set; }
 
         [Required]
-        private XElement MoreImages { get; set; }
+        public decimal Price { get; set; }
 
-        [Required]
-        private decimal Price { get; set; }
-
-        private decimal? PromotionPrice { get; set; }
+        public decimal? PromotionPrice { get; set; }
 
         public int? Warranty { set; get; }
 

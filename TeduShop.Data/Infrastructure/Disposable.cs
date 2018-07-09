@@ -4,7 +4,7 @@ namespace TeduShop.Data.Infrastructure
 {
     public class Disposable : IDisposable
     {
-        private bool isDisposed;
+        public bool isDisposed;
 
         ~Disposable()
         {
@@ -17,7 +17,7 @@ namespace TeduShop.Data.Infrastructure
             GC.SuppressFinalize(this);
         }
 
-        private void Dispose(bool disposing)
+        public void Dispose(bool disposing)
         {
             if (!isDisposed && disposing)
             {

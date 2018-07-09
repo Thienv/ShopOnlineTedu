@@ -9,16 +9,16 @@ namespace TeduShop.Model.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        private int ID { get; set; }
+        public int ID { get; set; }
 
         [Required]
         [MaxLength(256)]
-        private string Names { get; set; }
+        public string Names { get; set; }
 
         [Required]
         [MaxLength(256)]
-        private string Alias { get; set; }
+        public string Alias { get; set; }
 
-        private string Content { get; set; }
+        public string Content { get; set; }
     }
 }

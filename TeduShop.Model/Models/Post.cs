@@ -9,35 +9,35 @@ namespace TeduShop.Model.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        private int ID { get; set; }
+        public int ID { get; set; }
 
         [Required]
         [MaxLength(256)]
-        private string Names { get; set; }
+        public string Names { get; set; }
 
         [Required]
         [MaxLength(256)]
         [Column(TypeName = "varchar")]
-        private string Alias { get; set; }
+        public string Alias { get; set; }
 
         [Required]
-        private int CategoryID { get; set; }
+        public int CategoryID { get; set; }
 
         [Required]
         [MaxLength(256)]
-        private string Images { get; set; }
+        public string Images { get; set; }
 
         [Required]
         [MaxLength(500)]
-        private string Descriptions { get; set; }
+        public string Descriptions { get; set; }
 
-        private string Content { get; set; }
+        public string Content { get; set; }
 
-        private bool? HomeFlag { get; set; }
+        public bool? HomeFlag { get; set; }
 
-        private bool? HotFlag { get; set; }
+        public bool? HotFlag { get; set; }
 
-        private int? ViewCount { get; set; }
+        public int? ViewCount { get; set; }
 
         [ForeignKey("CategoryID")]
         public virtual PostCategorie PostCategory { set; get; }

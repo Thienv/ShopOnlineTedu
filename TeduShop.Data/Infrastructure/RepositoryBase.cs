@@ -6,12 +6,12 @@ using System.Linq.Expressions;
 
 namespace TeduShop.Data.Infrastructure
 {
-    public abstract class RepositoryBase<T> where T : class
+    public abstract class RepositoryBase<T> : IRepository<T> where T : class
     {
         #region Properties
 
-        private TeduShopDbContext dataContext;
-        private readonly IDbSet<T> dbSet;
+        public TeduShopDbContext dataContext;
+        public readonly IDbSet<T> dbSet;
 
         protected IDbFactory DbFactory
         {
