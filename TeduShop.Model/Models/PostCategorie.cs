@@ -36,5 +36,6 @@ namespace TeduShop.Model.Models
         
         public bool? HomeFlag { get; set; }
         public virtual IEnumerable<Post> post { get; set; }
+        public bool Status { get; set; }
     }
 }
