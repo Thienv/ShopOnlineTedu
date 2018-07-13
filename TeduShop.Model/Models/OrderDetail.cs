@@ -7,7 +7,7 @@ namespace TeduShop.Model.Models
     public class OrderDetail
     {
         [Key]
-        [Column(Order = 1)]
+        [Column(Order =1)]
         public int OrderID { set; get; }
 
         [Key]
@@ -20,6 +20,6 @@ namespace TeduShop.Model.Models
         public virtual Order Order { set; get; }
 
         [ForeignKey("ProductID")]
-        public virtual Products Product { set; get; }
+        public virtual Product Product { set; get; }
     }
 }

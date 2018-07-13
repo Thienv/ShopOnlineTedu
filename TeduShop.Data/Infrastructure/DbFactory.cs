@@ -2,7 +2,7 @@
 {
     public class DbFactory : Disposable, IDbFactory
     {
-        public TeduShopDbContext dbContext;
+        private TeduShopDbContext dbContext;
 
         public TeduShopDbContext Init()
         {

@@ -8,27 +8,23 @@ namespace TeduShop.Model.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { get; set; }
+        public int ID { set; get; }
 
         [Required]
         [MaxLength(256)]
-        public string Names { get; set; }
+        public string Name { set; get; }
 
-        [Required]
         [MaxLength(256)]
-        public string Descriptions { get; set; }
+        public string Description { set; get; }
 
-        [Required]
         [MaxLength(256)]
-        public string Images { get; set; }
+        public string Image { set; get; }
 
-        [Required]
         [MaxLength(256)]
-        public string Urls { get; set; }
+        public string Url { set; get; }
 
-        public int? DisplayOrder { get; set; }
+        public int? DisplayOrder { set; get; }
 
-       
-        public bool? Statuss { get; set; }
+        public bool Status { set; get; }
     }
 }

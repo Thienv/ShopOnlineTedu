@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace TeduShop.Data.Infrastructure
 {
     public class Disposable : IDisposable
     {
-        public bool isDisposed;
+        private bool isDisposed;
 
         ~Disposable()
         {
@@ -16,8 +20,7 @@ namespace TeduShop.Data.Infrastructure
             Dispose(true);
             GC.SuppressFinalize(this);
         }
-
-        public void Dispose(bool disposing)
+        private void Dispose(bool disposing)
         {
             if (!isDisposed && disposing)
             {
